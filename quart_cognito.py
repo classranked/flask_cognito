@@ -1,6 +1,6 @@
 from collections import OrderedDict
 from functools import wraps
-from flask import g, current_app, jsonify, request
+from quart import g, current_app, jsonify, request
 from werkzeug.local import LocalProxy
 from cognitojwt import CognitoJWTException, decode as cognito_jwt_decode
 from jose.exceptions import JWTError

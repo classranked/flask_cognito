@@ -1,4 +1,4 @@
-Flask-Cognito
+Quart-Cognito
 -------------
 
 Authenticate users based on AWS Cognito JWT.
@@ -20,7 +20,7 @@ app.config.update({
 
 
 # initialize extension
-from flask_cognito import CognitoAuth
+from quart_cognito import CognitoAuth
 cogauth = CognitoAuth(app)
 
 @cogauth.identity_handler
@@ -31,7 +31,7 @@ def lookup_cognito_user(payload):
 
 # Check Authentication
 ```python3
-from flask_cognito import cognito_auth_required, current_user, current_cognito_jwt
+from quart_cognito import cognito_auth_required, current_user, current_cognito_jwt
 
 @route('/api/private')
 @cognito_auth_required
@@ -46,7 +46,7 @@ def api_private():
 
 # Restrict access by Cognito Group
 ```python3
-from flask_cognito import cognito_auth_required, current_user, current_cognito_jwt
+from quart_cognito import cognito_auth_required, current_user, current_cognito_jwt
 
 @route('/api/foo')
 @cognito_auth_required
@@ -59,5 +59,6 @@ def api_private():
 ```
 
 ### Acknowledgements
+* Based on [flask-cognito](https://github.com/jetbridge/flask_cognito) nearly 100%.
 * Uses [cognitojwt](https://github.com/borisrozumnuk/cognitojwt) at its core.
 * Based on [flask-jwt](https://github.com/mattupstate/flask-jwt/).
