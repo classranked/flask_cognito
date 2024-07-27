@@ -9,6 +9,7 @@ werkzeug = "*"
 requests = "*"
 rsa = "*"
 quart = "*"
+flask = "*"
 
 [dev-packages]
 

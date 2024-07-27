@@ -22,6 +22,7 @@ setup(
     platforms='any',
     install_requires=[
         'quart',
+        'Flask',
         # 'cognitojwt[sync]>=1.1.0',
         'cognitojwt>=1.1.0',
         'werkzeug',
